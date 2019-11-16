@@ -1,0 +1,51 @@
+@import 'compass/css3';
+
+$btn-w: 12em;
+$btn-lh: 3;
+$btn-d: sqrt(pow($btn-w, 2) + pow($btn-lh, 2));
+$btn-a: atan($btn-lh/($btn-w/($btn-w*0 + 1)))*-180deg/pi();
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background: #333;
+}
+
+.buttonA {
+  --p: 0;
+  --q: calc(1 - var(--p));
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  width: $btn-w;
+  background: #fff;
+  color: #000;
+  font: 700 1.125em/ #{$btn-lh} trebuchet ms, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  &:before, &:after {
+    --i: var(--p);
+    --j: calc(1 - var(--i));
+    position: absolute;
+    z-index: -1;
+    top: 0; bottom: 0;
+    left: calc(var(--j)*(100% - #{$btn-d}));
+    width: $btn-d;
+    transform-origin: calc(var(--j)*100%) calc(var(--i)*100%);
+    transform: rotate($btn-a) translate(calc(var(--q)*(1 - 2*var(--i))*-100%));
+    box-shadow: 0 0 0 1px currentcolor;
+    background: currentcolor;
+    color: #ef4654;
+    transition: transform .5s ease-in-out;
+    content: ''
+  }
+  
+  &:after { --i: var(--q) }
+  
+  &:hover, &:focus { --p: 1 }
+}
