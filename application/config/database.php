@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'exosdatanet_proyectoArqui',
-	'password' => 'daniel2700',
-	'database' => 'exosdatanet_proyectoArqui',
+	'hostname' => 'Direccion IP de donde se encuentra la base de datos',
+	'username' => 'nombre de usuario dueña',
+	'password' => 'contrasena',
+	'database' => 'nombre de la base de datos',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
