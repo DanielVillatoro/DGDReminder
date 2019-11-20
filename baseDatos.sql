@@ -55,7 +55,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `email`, `password`, `date_added`) VALUES
-(1, 'Usuario', 'Usuario_lastName', 'usuario@gmail.com', '$2y$10$SitkUXttnSUTe7.eLdZhO.YL1K.QVqotFiiu4wKcGrFIzUQz4M4Ha', '2018-12-17 23:09:10');
+(1, 'Usuario', 'Usuario_lastName', 'proyectoArqui', '$2y$10$SitkUXttnSUTe7.eLdZhO.YL1K.QVqotFiiu4wKcGrFIzUQz4M4Ha', '2018-12-17 23:09:10');
 
 --
 -- Índices para tablas volcadas
